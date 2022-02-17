@@ -36,7 +36,7 @@ function Header() {
             className='header_option'>
               <span 
               className='header_optionLineOne'>
-                Hello Guest</span>
+                Hello {!user ? 'Guest' : user.email}</span>
                 <span
               className='header_optionLineTwo'>
                 {user ? 'Sign Out' : 'Sign In'}</span>
