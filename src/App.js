@@ -12,6 +12,7 @@ import { type } from '@testing-library/user-event/dist/type';
 import Payment from './Payment';
 import {loadStripe} from '@stripe/stripe-js';
 import {Elements} from '@stripe/react-stripe-js';
+import Orders from './Orders';
 
 const promise = loadStripe('pk_test_51KU73TSCeqXrJflUSjBK6VcghX7KomDVBHFXnUyjQ3jF8L6w5SIKRfAl7YcVFt0cpLrOWoPyR1AePXMvWE1Azo4r00V8uSVCHg');
 
@@ -52,6 +53,8 @@ function App() {
         {/*  <Route path='/' 
           element={<><Header/><Home/></>} />
           this is to use two elements inside element */}
+          <Route path='/orders' element={<><Header/><Orders/></>}/>
+          <Route path='/login' element={<Login/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/' element={<><Header/><Home/></>} />
           <Route path='/checkout' element={<><Header/><Checkout/></>}/>
